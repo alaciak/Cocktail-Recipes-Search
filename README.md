@@ -1,4 +1,4 @@
-# Recipes-Search
+# Cocktail-Recipes-Search
 
 ## work in progress
 
