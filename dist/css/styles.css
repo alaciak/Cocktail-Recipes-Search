@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+canvas,
+img,
+video {
+  max-width: 100%; }
+
+.container .row::before, .container .row::after {
+  clear: both;
+  content: '';
+  display: block; }
+
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 100%; }
+  .container .row {
+    width: 100%; }
+    .container .row .col-1 {
+      float: left;
+      width: 8.33333%; }
+    .container .row .col-2 {
+      float: left;
+      width: 16.66667%; }
+    .container .row .col-3 {
+      float: left;
+      width: 25%; }
+    .container .row .col-4 {
+      float: left;
+      width: 33.33333%; }
+    .container .row .col-5 {
+      float: left;
+      width: 41.66667%; }
+    .container .row .col-6 {
+      float: left;
+      width: 50%; }
+    .container .row .col-7 {
+      float: left;
+      width: 58.33333%; }
+    .container .row .col-8 {
+      float: left;
+      width: 66.66667%; }
+    .container .row .col-9 {
+      float: left;
+      width: 75%; }
+    .container .row .col-10 {
+      float: left;
+      width: 83.33333%; }
+    .container .row .col-11 {
+      float: left;
+      width: 91.66667%; }
+    .container .row .col-12 {
+      float: left;
+      width: 100%; }
+
+* {
+  font-size: 16px; }
+
+.search-box {
+  margin: 2em auto;
+  background-color: grey;
+  border-radius: 5px; }
+
+input[type=text] {
+  padding: 0.6em;
+  border: 0;
+  display: block;
+  font-size: 1.5em;
+  color: grey;
+  margin: 5px; }
+
+.search-icon {
+  height: 4em;
+  background: url(../img/loupe.jpg) no-repeat center/contain;
+  margin: 0.2em 0;
+  opacity: 0.8; }
+
+.recipe-image {
+  width: 300px;
+  height: 300px; }
+
+.fullScreen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.7); }
+
+.fullScreen-button_close {
+  display: block;
+  margin: 0 auto;
+  width: 10vw;
+  height: 5vh;
+  border-radius: 1em; }
+
+.fullScreen img {
+  display: block;
+  margin: 1.5em auto;
+  width: 40%;
+  height: 40%; }
