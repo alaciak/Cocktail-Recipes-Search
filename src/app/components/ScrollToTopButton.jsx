@@ -2,7 +2,6 @@ import React from 'react';
 
 class ScrollToTopButton extends React.Component {
 
-
   handleOnClickScrollUp = (event, scrollDuration) => {
     event.preventDefault();
     let scrollValue = -window.scrollY / (scrollDuration / 20),
