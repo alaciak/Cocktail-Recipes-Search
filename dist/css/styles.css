@@ -89,17 +89,35 @@ input[type=text] {
   left: 0;
   top: 0;
   z-index: 1;
-  background: rgba(255, 255, 255, 0.7); }
+  background: rgba(255, 255, 255, 0.8); }
 
 .fullScreen-button_close {
   display: block;
   margin: 0 auto;
   width: 10vw;
   height: 5vh;
-  border-radius: 1em; }
+  border-radius: .5em;
+  font-size: 1.25em; }
 
 .fullScreen img {
   display: block;
   margin: 1.5em auto;
   width: 40%;
   height: 40%; }
+
+.scroll-to-top {
+  position: fixed;
+  bottom: .5em;
+  right: 1em;
+  height: 1em;
+  width: 1em;
+  border-radius: 50%;
+  border: none;
+  background: black;
+  color: yellow;
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  opacity: .9; }
+  .scroll-to-top:hover {
+    cursor: pointer; }

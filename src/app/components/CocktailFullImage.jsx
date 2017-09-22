@@ -1,5 +1,5 @@
 import React from 'react';
-import { hideImage } from '../actions/fullImageAction.jsx';
+import { hideImage } from '../actions/fullImageAction';
 import { connect } from "react-redux";
 
 class CocktailFullImage extends React.Component {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { changeQuery } from '../actions/recipesListAction.jsx';
+import { changeQuery } from '../actions/recipesListAction';
 import { connect } from "react-redux";
 
 class SearchBox extends React.Component {

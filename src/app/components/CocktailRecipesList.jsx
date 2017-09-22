@@ -1,7 +1,7 @@
 import React from 'react';
 import CocktailRecipe from './CocktailRecipe.jsx';
 import { connect } from "react-redux";
-import { showImage } from "../actions/fullImageAction.jsx";
+import { showImage } from "../actions/fullImageAction";
 
 class CocktailRecipesList extends React.Component {
 
