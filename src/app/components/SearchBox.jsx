@@ -1,4 +1,6 @@
 import React from 'react';
+import { changeQuery } from '../actions/recipesListAction.jsx';
+import { connect } from "react-redux";
 
 class SearchBox extends React.Component {
   constructor(props) {
@@ -23,8 +25,8 @@ class SearchBox extends React.Component {
   }
 
   handleOnClick = event => {
-    if(this.state.text !== 'Search for your cocktail by name...' && typeof this.props.onChangeRecipe === 'function') {
-      this.props.onChangeRecipe(this.state.text);
+    if(this.state.text !== 'Search for your cocktail by name...') {
+      this.props.changeQuery(this.state.text);
     }
   }
 
@@ -33,6 +35,7 @@ class SearchBox extends React.Component {
       this.handleOnClick(event.target.value);
       }
     }
+
 
   render() {
     return  <div className='container search-box'>
@@ -44,4 +47,16 @@ class SearchBox extends React.Component {
   }
 }
 
-module.exports = SearchBox;
+const mapStateToProps = (state) => {
+  return {};
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        changeQuery: (query) => {
+            dispatch(changeQuery(query));
+        }
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchBox);

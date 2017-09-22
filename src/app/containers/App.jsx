@@ -1,20 +1,27 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import CocktailRecipePage from '../components/CocktailRecipePage.jsx';
-import '../scss/style.scss';
-
+import SearchBox from '../components/SearchBox.jsx';
+import CocktailRecipesList from '../components/CocktailRecipesList.jsx';
+import CocktailFullImage from '../components/CocktailFullImage.jsx';
+import ScrollToTopButton from '../components/ScrollToTopButton.jsx';
+import { Provider } from "react-redux";
+import store from "../Store.jsx";
 
 class App extends React.Component {
 
   render() {
-    return <div className='col-12'>
-      <CocktailRecipePage />
-    </div>
+    return <div>
+      <Provider store={ store }>
+        <SearchBox />
+      </Provider>
+      <Provider store={ store }>
+        <CocktailRecipesList />
+      </Provider>
+      <Provider store={ store }>
+        <CocktailFullImage />
+      </Provider>
+      <ScrollToTopButton/>
+    </div>;
   }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-
-  ReactDOM.render(
-    <App/>, document.querySelector('#app'));
-});
+ module.exports = App;

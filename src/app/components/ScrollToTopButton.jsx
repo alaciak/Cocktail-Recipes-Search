@@ -1,8 +1,8 @@
 import React from 'react';
 
-class ScrollToTopButton extends React.Component {
+const ScrollToTopButton = () => {
 
-  handleOnClickScrollUp = (event, scrollDuration) => {
+  const handleOnClickScrollUp = (event, scrollDuration) => {
     event.preventDefault();
     let scrollValue = -window.scrollY / (scrollDuration / 20),
         scrollInterval = setInterval(function(){
@@ -13,9 +13,7 @@ class ScrollToTopButton extends React.Component {
     },15);
   }
 
-  render() {
-    return <div className='scroll-to-top' onClick={ event => this.handleOnClickScrollUp(event, 1000) } style={{ display: this.props.display }}>^</div>
-  }
+  return <div className='scroll-to-top' onClick={ event => handleOnClickScrollUp(event, 1000) } >^</div>
 }
 
 module.exports = ScrollToTopButton;
