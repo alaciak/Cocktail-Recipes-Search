@@ -1,17 +1,25 @@
 .scroll-to-top {
   position: fixed;
-  bottom: .5em;
-  right: 1em;
-  height: 1em;
-  width: 1em;
-  border-radius: 50%;
+  bottom: .25em;
+  right: .25em;
+  height: .75em;
+  width: .75em;
+  border-radius: .125em;
   border: none;
-  background: black;
-  color: yellow;
-  font-size: 3em;
+  background: #000;
+  color: #dff41d;
+  font-size: 4em;
   font-weight: bold;
-  text-align: center;
+  display: flex;
+  align-items:center;
+  justify-content: center;
   opacity: .8;
+  @media(min-width: 640px) {
+    bottom: .5em;
+    right: 1em;
+    height: 1em;
+    width: 1em;
+  }
 
   &:hover {
     cursor: pointer;

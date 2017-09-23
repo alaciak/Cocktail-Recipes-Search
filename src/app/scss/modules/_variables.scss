@@ -1,3 +1,17 @@
 $columns: 12;
 
-$font-family: 'Raleway', sans-serif;
+$font-family: 'Nunito', sans-serif;
+
+$background-colors: (
+  search-input: #e1efd0,
+  search-background: #222d22,
+  recipes-section:#000,
+  recipe-border:#1d2b00
+);
+
+$font-colors: (
+  search-input:#575b4f,
+  search-button: #fff,
+  recipes-section:#e1efd0,
+  recipe-heading:#a8ed63
+)

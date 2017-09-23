@@ -13,8 +13,8 @@ class CocktailRecipesList extends React.Component {
         return <CocktailRecipe key={ recipe.idDrink } id={ recipe.idDrink } recipe={ recipe } showFullImage={ this.props.showImage }/>
       });
       return <section id='recipes-list'>
-        <div className='container'>
-          <p className='recipes-list_heading'>Your Cocktails</p>
+        <div className='container recipes-list'>
+          <h1 className='col-12 recipes-list_heading'>Your Cocktails</h1>
           { recipes }
         </div>
       </section>;

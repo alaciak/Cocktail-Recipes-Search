@@ -11,18 +11,22 @@ const CocktailRecipe = (props) => {
   }
 
   return (
-    <div className='row '>
-      <div>{ props.recipe.strDrink} </div>
-      <div>{ props.recipe.strCategory }</div>
-      <div>{ props.recipe.strAlcoholic }</div>
-      <div className='col-6'>
-        <img className='recipe-image' src={ props.recipe.strDrinkThumb } onClick={ () => props.showFullImage(props.recipe.strDrinkThumb) }></img>
+      <div className='row recipes-list_element'>
+        <div className='col-6 recipes-list_main'>
+          <h4>{ props.recipe.strDrink } </h4>
+          <p>Category: { props.recipe.strCategory }</p>
+          <p>Type: { props.recipe.strAlcoholic }</p>
+          <div className='recipes-list_image'>
+            <img  src={ props.recipe.strDrinkThumb } onClick={ () => props.showFullImage(props.recipe.strDrinkThumb) }></img>
+          </div>
+        </div>
+        <div className='col-6 recipes-list_ingredients'>
+          <p className='recipes-list_ingredients_heading'>Ingredients:</p>
+          <ul>{ ingredientsList }</ul>
+          <p className='recipes-list_ingredients_heading'>Instructions:</p>
+          <p className='recipes-list_ingredients_instructions'>{ props.recipe.strInstructions }</p>
+        </div>
       </div>
-      <div className='col-6'>
-        <ul>{ ingredientsList }</ul>
-      </div>
-      <div>{ props.recipe.strInstructions }</div>
-    </div>
   );
 }
 

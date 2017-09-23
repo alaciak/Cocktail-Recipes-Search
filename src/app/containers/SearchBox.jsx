@@ -25,7 +25,7 @@ class SearchBox extends React.Component {
   }
 
   handleOnClick = event => {
-    if(this.state.text !== 'Search for your cocktail by name...') {
+    if(this.state.text !== 'Search for your cocktail by name...' && this.state.text !== '') {
       this.props.changeQuery(this.state.text);
     }
   }
@@ -40,8 +40,8 @@ class SearchBox extends React.Component {
   render() {
     return  <div className='container search-box'>
         <div className='row'>
-          <input className='col-10' type='text' value={ this.state.text } onChange={ this.handleOnChangeSearch } onClick={ this.handleOnClickSearch } onKeyPress={ this.handleOnKeyPress } ></input>
-          <div className='search-button col-1' onClick={ this.handleOnClick } >Let's go!</div>
+          <input className='search-box_input' type='text' value={ this.state.text } onChange={ this.handleOnChangeSearch } onClick={ this.handleOnClickSearch } onKeyPress={ this.handleOnKeyPress } ></input>
+          <div className='search-box_button' onClick={ this.handleOnClick } >Search!</div>
         </div>
       </div>;
   }

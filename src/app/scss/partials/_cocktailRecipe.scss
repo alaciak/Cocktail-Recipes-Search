@@ -1,0 +1,85 @@
+.recipes-list {
+  background: map-get($background-colors, recipes-section);
+  opacity: 0.8;
+  border-radius: 0.5em;
+  color: map-get($font-colors, recipes-section);
+
+  h1 {
+    text-align: center;
+    padding: .5em;
+    font-size: 2.5em;
+    font-weight: 900;
+    color: map-get($font-colors, recipe-heading);
+    @media(min-width: 640px) {
+      font-size: 4em;
+    }
+  }
+
+  li {
+    color: map-get($font-colors, recipes-section);
+  }
+
+  .recipes-list_element {
+    padding: 1.5em;
+    border-bottom: 5px solid map-get($background-colors, recipe-border);
+  }
+
+  .recipes-list_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 300px;
+      height: 300px;
+      border-radius: .5em;
+      margin-bottom: .5em;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .recipes-list_main {
+    p {
+      text-align: center;
+      font-size: 1.25em;
+      padding-bottom: .7em;
+    }
+
+    h4 {
+      font-size: 2em;
+      text-align: center;
+      padding-bottom: .5em;
+    }
+
+    @media(max-width: 640px) {
+      width: 100%;
+    }
+  }
+
+  .recipes-list_ingredients {
+    .recipes-list_ingredients_heading {
+      border-bottom: 2px solid map-get($background-colors, recipe-border);
+      text-align: center;
+      font-size: 2em;
+    }
+    li {
+      text-align: center;
+      font-size: 1.25em;
+      padding-bottom: .5em;
+      list-style-type: none;
+    }
+    ul {
+      padding: 1.5em 0;
+    }
+    .recipes-list_ingredients_instructions {
+      font-size: 1.25em;
+      text-align: center;
+      padding: 1.5em 0;
+    }
+    @media(max-width: 640px) {
+      width: 100%;
+    }
+  }
+}
