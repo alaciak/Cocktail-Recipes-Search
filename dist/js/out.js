@@ -34331,7 +34331,7 @@ var SearchBox = function (_React$Component) {
     };
 
     _this.handleOnClick = function (event) {
-      if (_this.state.text !== 'Search for your cocktail by name...' && _this.state.text !== '') {
+      if (_this.state.text !== '') {
         _this.props.changeQuery(_this.state.text);
       }
     };
@@ -34485,6 +34485,26 @@ var CocktailRecipesList = function (_React$Component) {
 
       if (this.props.loading) {
         return null;
+      }
+      if (!this.props.cocktailList) {
+        return _react2.default.createElement(
+          'section',
+          { id: 'recipes-list' },
+          _react2.default.createElement(
+            'div',
+            { className: 'container recipes-list_not-found' },
+            _react2.default.createElement(
+              'p',
+              null,
+              'Ooops it looks like we don\'t have this cocktail recipe for you...'
+            ),
+            _react2.default.createElement(
+              'p',
+              null,
+              'Why not try another search?'
+            )
+          )
+        );
       } else {
         var recipes = this.props.cocktailList.map(function (recipe) {
           return _react2.default.createElement(_CocktailRecipe2.default, { key: recipe.idDrink, id: recipe.idDrink, recipe: recipe, showFullImage: _this2.props.showImage });
