@@ -1,6 +1,5 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import { createLogger } from "redux-logger";
-import thunk from "redux-thunk";
 import promise from "redux-promise-middleware";
 
 import recipesListReducer from "./reducers/recipesListReducer";
@@ -12,5 +11,5 @@ export default createStore(
         fullImageReducer
     }),
     {},
-    applyMiddleware(createLogger(), thunk, promise())
+    applyMiddleware(createLogger(), promise())
 );

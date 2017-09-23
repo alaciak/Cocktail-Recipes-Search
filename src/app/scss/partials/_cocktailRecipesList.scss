@@ -6,7 +6,7 @@
 
   h1 {
     text-align: center;
-    padding: .5em;
+    padding: 0.5em;
     font-size: 2.5em;
     font-weight: 900;
     color: map-get($font-colors, recipe-heading);
@@ -32,8 +32,9 @@
     img {
       width: 300px;
       height: 300px;
-      border-radius: .5em;
-      margin-bottom: .5em;
+      border-radius: 0.5em;
+      margin-bottom: 0.5em;
+
       &:hover {
         cursor: pointer;
       }
@@ -44,15 +45,14 @@
     p {
       text-align: center;
       font-size: 1.25em;
-      padding-bottom: .7em;
+      padding-bottom: 0.7em;
     }
 
     h4 {
       font-size: 2em;
       text-align: center;
-      padding-bottom: .5em;
+      padding-bottom: 0.5em;
     }
-
     @media(max-width: 640px) {
       width: 100%;
     }
@@ -64,15 +64,18 @@
       text-align: center;
       font-size: 2em;
     }
+
     li {
       text-align: center;
       font-size: 1.25em;
-      padding-bottom: .5em;
+      padding-bottom: 0.5em;
       list-style-type: none;
     }
+
     ul {
       padding: 1.5em 0;
     }
+
     .recipes-list_ingredients_instructions {
       font-size: 1.25em;
       text-align: center;
@@ -80,6 +83,17 @@
     }
     @media(max-width: 640px) {
       width: 100%;
+    }
+  }
+}
+
+.recipes-list_not-found {
+  p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: map-get($font-colors, search-input);
+    @media(min-width: 640px) {
+      font-size: 2rem;
     }
   }
 }

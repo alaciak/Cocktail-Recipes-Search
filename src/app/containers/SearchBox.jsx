@@ -25,7 +25,7 @@ class SearchBox extends React.Component {
   }
 
   handleOnClick = event => {
-    if(this.state.text !== 'Search for your cocktail by name...' && this.state.text !== '') {
+    if(this.state.text !== '') {
       this.props.changeQuery(this.state.text);
     }
   }
