@@ -4,7 +4,7 @@ const ScrollToTopButton = () => {
 
   const handleOnClickScrollUp = (event, scrollDuration) => {
     event.preventDefault();
-    let scrollValue = -window.scrollY / (scrollDuration / 20),
+    const scrollValue = -window.scrollY / (scrollDuration / 20),
         scrollInterval = setInterval(function(){
         if ( window.scrollY != 0 ) {
             window.scrollBy( 0, scrollValue );
