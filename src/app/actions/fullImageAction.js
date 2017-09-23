@@ -6,10 +6,10 @@ export function showImage(url) {
   };
 }
 
-export function hideImage(url) {
+export function hideImage() {
 
   return {
-    type: 'SHOW_IMAGE',
+    type: 'HIDE_IMAGE',
     payload: null
   };
 }

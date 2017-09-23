@@ -1,7 +1,7 @@
 import React from 'react';
-import SearchBox from '../components/SearchBox.jsx';
-import CocktailRecipesList from '../components/CocktailRecipesList.jsx';
-import CocktailFullImage from '../components/CocktailFullImage.jsx';
+import SearchBox from './SearchBox.jsx';
+import CocktailRecipesList from './CocktailRecipesList.jsx';
+import CocktailFullImage from './CocktailFullImage.jsx';
 import ScrollToTopButton from '../components/ScrollToTopButton.jsx';
 import { Provider } from "react-redux";
 import store from "../Store.jsx";

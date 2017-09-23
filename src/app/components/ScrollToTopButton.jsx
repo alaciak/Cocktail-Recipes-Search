@@ -10,7 +10,7 @@ const ScrollToTopButton = () => {
             window.scrollBy( 0, scrollValue );
         }
         else clearInterval(scrollInterval);
-    },15);
+    }, 15);
   }
 
   return <div className='scroll-to-top' onClick={ event => handleOnClickScrollUp(event, 1000) } >^</div>

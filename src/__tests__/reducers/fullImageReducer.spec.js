@@ -1,6 +1,9 @@
 import fullImageReducer from '../../app/reducers/fullImageReducer';
 
 describe('fullImageReducer', () => {
+
+  const testUrl = 'http://cocktail-recipes-search.com/my-image.jpg';
+
   it('should return initial state', () => {
     expect(fullImageReducer(undefined, {})).toEqual({
       url: null
@@ -10,15 +13,15 @@ describe('fullImageReducer', () => {
   it('should handle SHOW_IMAGE', () => {
     expect(fullImageReducer(undefined, {
       type: 'SHOW_IMAGE',
-      payload: 'http://cocktail-recipes-search.com/my-image.jpg'
+      payload: testUrl
     })).toEqual({
-      url: 'http://cocktail-recipes-search.com/my-image.jpg'
+      url: testUrl
     });
   });
 
   it('should handle HIDE_IMAGE', () => {
     expect(fullImageReducer({
-      url: 'http://cocktail-recipes-search.com/my-image.jpg'
+      url: testUrl
     }, {
       type: 'HIDE_IMAGE'
     })).toEqual({
