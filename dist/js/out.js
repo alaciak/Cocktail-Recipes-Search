@@ -34554,14 +34554,14 @@ var CocktailRecipe = function CocktailRecipe(props) {
     ),
     _react2.default.createElement(
       'div',
-      null,
+      { className: 'col-6' },
       _react2.default.createElement('img', { className: 'recipe-image', src: props.recipe.strDrinkThumb, onClick: function onClick() {
           return props.showFullImage(props.recipe.strDrinkThumb);
         } })
     ),
     _react2.default.createElement(
       'div',
-      null,
+      { className: 'col-6' },
       _react2.default.createElement(
         'ul',
         null,

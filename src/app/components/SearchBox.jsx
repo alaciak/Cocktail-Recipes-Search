@@ -41,7 +41,7 @@ class SearchBox extends React.Component {
     return  <div className='container search-box'>
         <div className='row'>
           <input className='col-10' type='text' value={ this.state.text } onChange={ this.handleOnChangeSearch } onClick={ this.handleOnClickSearch } onKeyPress={ this.handleOnKeyPress } ></input>
-          <div className='search-icon col-1' onClick={ this.handleOnClick } ></div>
+          <div className='search-button col-1' onClick={ this.handleOnClick } >Let's go!</div>
         </div>
       </div>;
   }

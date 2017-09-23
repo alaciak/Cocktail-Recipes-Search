@@ -15,10 +15,10 @@ const CocktailRecipe = (props) => {
       <div>{ props.recipe.strDrink} </div>
       <div>{ props.recipe.strCategory }</div>
       <div>{ props.recipe.strAlcoholic }</div>
-      <div>
+      <div className='col-6'>
         <img className='recipe-image' src={ props.recipe.strDrinkThumb } onClick={ () => props.showFullImage(props.recipe.strDrinkThumb) }></img>
       </div>
-      <div>
+      <div className='col-6'>
         <ul>{ ingredientsList }</ul>
       </div>
       <div>{ props.recipe.strInstructions }</div>
