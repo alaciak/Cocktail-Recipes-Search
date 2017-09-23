@@ -15363,19 +15363,15 @@ var _redux = __webpack_require__(214);
 
 var _reduxLogger = __webpack_require__(562);
 
-var _reduxThunk = __webpack_require__(563);
-
-var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
-
-var _reduxPromiseMiddleware = __webpack_require__(564);
+var _reduxPromiseMiddleware = __webpack_require__(563);
 
 var _reduxPromiseMiddleware2 = _interopRequireDefault(_reduxPromiseMiddleware);
 
-var _recipesListReducer = __webpack_require__(566);
+var _recipesListReducer = __webpack_require__(565);
 
 var _recipesListReducer2 = _interopRequireDefault(_recipesListReducer);
 
-var _fullImageReducer = __webpack_require__(567);
+var _fullImageReducer = __webpack_require__(566);
 
 var _fullImageReducer2 = _interopRequireDefault(_fullImageReducer);
 
@@ -15384,7 +15380,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = (0, _redux.createStore)((0, _redux.combineReducers)({
     recipesListReducer: _recipesListReducer2.default,
     fullImageReducer: _fullImageReducer2.default
-}), {}, (0, _redux.applyMiddleware)((0, _reduxLogger.createLogger)(), _reduxThunk2.default, (0, _reduxPromiseMiddleware2.default)()));
+}), {}, (0, _redux.applyMiddleware)((0, _reduxLogger.createLogger)(), (0, _reduxPromiseMiddleware2.default)()));
 
 /***/ }),
 /* 223 */
@@ -20729,7 +20725,7 @@ var _Store = __webpack_require__(222);
 
 var _Store2 = _interopRequireDefault(_Store);
 
-__webpack_require__(568);
+__webpack_require__(567);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -34410,7 +34406,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function changeQuery(query) {
 
   // const url = 'http://localhost:3000/drinks';
-  var url = 'http://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + query;
+  var url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + query;
 
   var fetchPromise = (0, _isomorphicFetch2.default)(url).then(function (resp) {
     var contentType = resp.headers.get("content-type");
@@ -34759,35 +34755,6 @@ module.exports = ScrollToTopButton;
 
 /***/ }),
 /* 563 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-function createThunkMiddleware(extraArgument) {
-  return function (_ref) {
-    var dispatch = _ref.dispatch,
-        getState = _ref.getState;
-    return function (next) {
-      return function (action) {
-        if (typeof action === 'function') {
-          return action(dispatch, getState, extraArgument);
-        }
-
-        return next(action);
-      };
-    };
-  };
-}
-
-var thunk = createThunkMiddleware();
-thunk.withExtraArgument = createThunkMiddleware;
-
-exports['default'] = thunk;
-
-/***/ }),
-/* 564 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34796,7 +34763,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FULFILLED", function() { return FULFILLED; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "REJECTED", function() { return REJECTED; });
 /* harmony export (immutable) */ __webpack_exports__["default"] = promiseMiddleware;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__isPromise__ = __webpack_require__(565);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__isPromise__ = __webpack_require__(564);
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -34962,7 +34929,7 @@ function promiseMiddleware() {
 }
 
 /***/ }),
-/* 565 */
+/* 564 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34978,7 +34945,7 @@ function isPromise(value) {
 }
 
 /***/ }),
-/* 566 */
+/* 565 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35007,7 +34974,7 @@ var recipesListReducer = function recipesListReducer() {
 module.exports = recipesListReducer;
 
 /***/ }),
-/* 567 */
+/* 566 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35039,7 +35006,7 @@ var fullImageReducer = function fullImageReducer() {
 module.exports = fullImageReducer;
 
 /***/ }),
-/* 568 */
+/* 567 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
