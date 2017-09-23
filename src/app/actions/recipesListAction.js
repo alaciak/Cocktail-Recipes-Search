@@ -3,7 +3,7 @@ import fetch from 'isomorphic-fetch';
 export function changeQuery(query) {
 
   // const url = 'http://localhost:3000/drinks';
-  const url = 'http://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + query;
+  const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + query;
 
   const fetchPromise = fetch(url).then(resp => {
     const contentType = resp.headers.get("content-type");
