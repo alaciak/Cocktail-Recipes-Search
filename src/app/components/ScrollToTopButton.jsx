@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const ScrollToTopButton = () => {
+const ScrollToTopButton = () => {
 
   const handleOnClickScrollUp = (event, scrollDuration) => {
     event.preventDefault();
@@ -14,4 +14,6 @@ export const ScrollToTopButton = () => {
       }
 
   return <div className='scroll-to-top' onClick={ event => handleOnClickScrollUp(event, 1000) } >^</div>
-}
+};
+
+module.exports = ScrollToTopButton;

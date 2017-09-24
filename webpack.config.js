@@ -41,7 +41,9 @@ module.exports = {
         test: /\.jpg$/,
         loader: 'file-loader',
         query: {
-          name: '../img/[name].[ext]'
+          name: '[name].[ext]',
+          outputPath: 'dist/img/',
+          publicPath: '../../'
         }
       }
     ],

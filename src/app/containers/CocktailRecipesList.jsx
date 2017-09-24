@@ -1,5 +1,5 @@
 import React from 'react';
-import { CocktailRecipe } from '../components/CocktailRecipe.jsx';
+import CocktailRecipe from '../components/CocktailRecipe.jsx';
 import { connect } from "react-redux";
 import { showImage } from "../actions/fullImageActions";
 

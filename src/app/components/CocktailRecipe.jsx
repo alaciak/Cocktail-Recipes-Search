@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const CocktailRecipe = (props) => {
+const CocktailRecipe = (props) => {
 
   const ingredientsList = [];
   for (let i = 1; i <= 15; i++) {
@@ -29,4 +29,6 @@ export const CocktailRecipe = (props) => {
         </div>
       </div>
   );
-}
+};
+
+module.exports = CocktailRecipe;
