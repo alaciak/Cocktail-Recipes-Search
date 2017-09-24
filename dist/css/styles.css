@@ -200,7 +200,7 @@ input[type=text] {
   .fullScreen img {
     border-radius: 0.5em;
     display: block;
-    margin: .5em auto;
+    margin: 1.5em auto;
     width: 300px;
     height: 300px; }
     @media (min-width: 640px) {
@@ -209,6 +209,7 @@ input[type=text] {
         height: 400px; } }
     @media (min-width: 840px) {
       .fullScreen img {
+        margin: 1em auto;
         width: 500px;
         height: 500px; } }
     @media (min-width: 1200px) {

@@ -20719,8 +20719,6 @@ var _reactRedux = __webpack_require__(75);
 
 var _App = __webpack_require__(554);
 
-var _App2 = _interopRequireDefault(_App);
-
 var _Store = __webpack_require__(222);
 
 var _Store2 = _interopRequireDefault(_Store);
@@ -20731,7 +20729,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 document.addEventListener('DOMContentLoaded', function () {
 
-  _reactDom2.default.render(_react2.default.createElement(_App2.default, null), document.querySelector('#app'));
+  _reactDom2.default.render(_react2.default.createElement(_App.App, null), document.querySelector('#app'));
 });
 
 /***/ }),
@@ -34203,6 +34201,11 @@ function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps, dis
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.App = undefined;
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(42);
@@ -34223,8 +34226,6 @@ var _CocktailFullImage2 = _interopRequireDefault(_CocktailFullImage);
 
 var _ScrollToTopButton = __webpack_require__(561);
 
-var _ScrollToTopButton2 = _interopRequireDefault(_ScrollToTopButton);
-
 var _reactRedux = __webpack_require__(75);
 
 var _Store = __webpack_require__(222);
@@ -34239,7 +34240,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var App = function (_React$Component) {
+var App = exports.App = function (_React$Component) {
   _inherits(App, _React$Component);
 
   function App() {
@@ -34269,15 +34270,13 @@ var App = function (_React$Component) {
           { store: _Store2.default },
           _react2.default.createElement(_CocktailFullImage2.default, null)
         ),
-        _react2.default.createElement(_ScrollToTopButton2.default, null)
+        _react2.default.createElement(_ScrollToTopButton.ScrollToTopButton, null)
       );
     }
   }]);
 
   return App;
 }(_react2.default.Component);
-
-module.exports = App;
 
 /***/ }),
 /* 555 */
@@ -34296,7 +34295,7 @@ var _react = __webpack_require__(42);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _recipesListAction = __webpack_require__(556);
+var _recipesListActions = __webpack_require__(556);
 
 var _reactRedux = __webpack_require__(75);
 
@@ -34338,7 +34337,7 @@ var SearchBox = function (_React$Component) {
 
     _this.handleOnKeyPress = function (event) {
       if (event.key === 'Enter') {
-        _this.handleOnClick(event.target.value);
+        _this.handleOnClick(event);
       }
     };
 
@@ -34378,7 +34377,7 @@ var mapStateToProps = function mapStateToProps(state) {
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     changeQuery: function changeQuery(query) {
-      dispatch((0, _recipesListAction.changeQuery)(query));
+      dispatch((0, _recipesListActions.changeQuery)(query));
     }
   };
 };
@@ -34405,7 +34404,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function changeQuery(query) {
 
-  // const url = 'http://localhost:3000/drinks';
   var url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + query;
 
   var fetchPromise = (0, _isomorphicFetch2.default)(url).then(function (resp) {
@@ -34446,6 +34444,7 @@ module.exports = self.fetch.bind(self);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.CocktailRecipesList = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -34455,11 +34454,9 @@ var _react2 = _interopRequireDefault(_react);
 
 var _CocktailRecipe = __webpack_require__(559);
 
-var _CocktailRecipe2 = _interopRequireDefault(_CocktailRecipe);
-
 var _reactRedux = __webpack_require__(75);
 
-var _fullImageAction = __webpack_require__(221);
+var _fullImageActions = __webpack_require__(221);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -34469,7 +34466,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var CocktailRecipesList = function (_React$Component) {
+var CocktailRecipesList = exports.CocktailRecipesList = function (_React$Component) {
   _inherits(CocktailRecipesList, _React$Component);
 
   function CocktailRecipesList() {
@@ -34507,7 +34504,7 @@ var CocktailRecipesList = function (_React$Component) {
         );
       } else {
         var recipes = this.props.cocktailList.map(function (recipe) {
-          return _react2.default.createElement(_CocktailRecipe2.default, { key: recipe.idDrink, id: recipe.idDrink, recipe: recipe, showFullImage: _this2.props.showImage });
+          return _react2.default.createElement(_CocktailRecipe.CocktailRecipe, { key: recipe.idDrink, id: recipe.idDrink, recipe: recipe, showFullImage: _this2.props.showImage });
         });
         return _react2.default.createElement(
           'section',
@@ -34540,7 +34537,7 @@ var mapStateToProps = function mapStateToProps(state) {
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     showImage: function showImage(url) {
-      dispatch((0, _fullImageAction.showImage)(url));
+      dispatch((0, _fullImageActions.showImage)(url));
     }
   };
 };
@@ -34554,13 +34551,18 @@ exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.CocktailRecipe = undefined;
+
 var _react = __webpack_require__(42);
 
 var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var CocktailRecipe = function CocktailRecipe(props) {
+var CocktailRecipe = exports.CocktailRecipe = function CocktailRecipe(props) {
 
   var ingredientsList = [];
   for (var i = 1; i <= 15; i++) {
@@ -34601,9 +34603,14 @@ var CocktailRecipe = function CocktailRecipe(props) {
       _react2.default.createElement(
         'div',
         { className: 'recipes-list_image' },
-        _react2.default.createElement('img', { src: props.recipe.strDrinkThumb, onClick: function onClick() {
+        _react2.default.createElement('img', { src: props.recipe.strDrinkThumb, alt: 'cocktail image small', onClick: function onClick() {
             return props.showFullImage(props.recipe.strDrinkThumb);
           } })
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        '[click image to enlarge]'
       )
     ),
     _react2.default.createElement(
@@ -34633,8 +34640,6 @@ var CocktailRecipe = function CocktailRecipe(props) {
   );
 };
 
-module.exports = CocktailRecipe;
-
 /***/ }),
 /* 560 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -34645,6 +34650,7 @@ module.exports = CocktailRecipe;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.CocktailFullImage = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -34652,7 +34658,7 @@ var _react = __webpack_require__(42);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _fullImageAction = __webpack_require__(221);
+var _fullImageActions = __webpack_require__(221);
 
 var _reactRedux = __webpack_require__(75);
 
@@ -34664,7 +34670,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var CocktailFullImage = function (_React$Component) {
+var CocktailFullImage = exports.CocktailFullImage = function (_React$Component) {
   _inherits(CocktailFullImage, _React$Component);
 
   function CocktailFullImage() {
@@ -34678,8 +34684,8 @@ var CocktailFullImage = function (_React$Component) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = CocktailFullImage.__proto__ || Object.getPrototypeOf(CocktailFullImage)).call.apply(_ref, [this].concat(args))), _this), _this.handleOnClickClose = function (e) {
-      e.preventDefault();
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = CocktailFullImage.__proto__ || Object.getPrototypeOf(CocktailFullImage)).call.apply(_ref, [this].concat(args))), _this), _this.handleOnClickClose = function (event) {
+      event.preventDefault();
       _this.props.hideImage();
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
@@ -34687,7 +34693,7 @@ var CocktailFullImage = function (_React$Component) {
   _createClass(CocktailFullImage, [{
     key: 'render',
     value: function render() {
-      if (this.props.url === null) {
+      if (!this.props.url) {
         return null;
       } else {
         return _react2.default.createElement(
@@ -34696,8 +34702,8 @@ var CocktailFullImage = function (_React$Component) {
           _react2.default.createElement(
             'div',
             null,
-            _react2.default.createElement('img', { src: this.props.url, onClick: function onClick(e) {
-                return e.stopPropagation();
+            _react2.default.createElement('img', { src: this.props.url, alt: 'cocktail image big', onClick: function onClick(event) {
+                return event.stopPropagation();
               } })
           ),
           _react2.default.createElement(
@@ -34722,7 +34728,7 @@ var mapStateToProps = function mapStateToProps(state) {
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     hideImage: function hideImage() {
-      dispatch((0, _fullImageAction.hideImage)());
+      dispatch((0, _fullImageActions.hideImage)());
     }
   };
 };
@@ -34736,18 +34742,23 @@ exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.ScrollToTopButton = undefined;
+
 var _react = __webpack_require__(42);
 
 var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var ScrollToTopButton = function ScrollToTopButton() {
+var ScrollToTopButton = exports.ScrollToTopButton = function ScrollToTopButton() {
 
   var handleOnClickScrollUp = function handleOnClickScrollUp(event, scrollDuration) {
     event.preventDefault();
-    var scrollValue = -window.scrollY / (scrollDuration / 20),
-        scrollInterval = setInterval(function () {
+    var scrollValue = -window.scrollY / (scrollDuration / 20);
+    var scrollInterval = setInterval(function () {
       if (window.scrollY != 0) {
         window.scrollBy(0, scrollValue);
       } else clearInterval(scrollInterval);
@@ -34762,8 +34773,6 @@ var ScrollToTopButton = function ScrollToTopButton() {
     '^'
   );
 };
-
-module.exports = ScrollToTopButton;
 
 /***/ }),
 /* 562 */
