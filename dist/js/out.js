@@ -34226,6 +34226,8 @@ var _CocktailFullImage2 = _interopRequireDefault(_CocktailFullImage);
 
 var _ScrollToTopButton = __webpack_require__(561);
 
+var _ScrollToTopButton2 = _interopRequireDefault(_ScrollToTopButton);
+
 var _reactRedux = __webpack_require__(75);
 
 var _Store = __webpack_require__(222);
@@ -34270,7 +34272,7 @@ var App = exports.App = function (_React$Component) {
           { store: _Store2.default },
           _react2.default.createElement(_CocktailFullImage2.default, null)
         ),
-        _react2.default.createElement(_ScrollToTopButton.ScrollToTopButton, null)
+        _react2.default.createElement(_ScrollToTopButton2.default, null)
       );
     }
   }]);
@@ -34454,6 +34456,8 @@ var _react2 = _interopRequireDefault(_react);
 
 var _CocktailRecipe = __webpack_require__(559);
 
+var _CocktailRecipe2 = _interopRequireDefault(_CocktailRecipe);
+
 var _reactRedux = __webpack_require__(75);
 
 var _fullImageActions = __webpack_require__(221);
@@ -34504,7 +34508,7 @@ var CocktailRecipesList = exports.CocktailRecipesList = function (_React$Compone
         );
       } else {
         var recipes = this.props.cocktailList.map(function (recipe) {
-          return _react2.default.createElement(_CocktailRecipe.CocktailRecipe, { key: recipe.idDrink, id: recipe.idDrink, recipe: recipe, showFullImage: _this2.props.showImage });
+          return _react2.default.createElement(_CocktailRecipe2.default, { key: recipe.idDrink, id: recipe.idDrink, recipe: recipe, showFullImage: _this2.props.showImage });
         });
         return _react2.default.createElement(
           'section',
@@ -34551,18 +34555,13 @@ exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.CocktailRecipe = undefined;
-
 var _react = __webpack_require__(42);
 
 var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var CocktailRecipe = exports.CocktailRecipe = function CocktailRecipe(props) {
+var CocktailRecipe = function CocktailRecipe(props) {
 
   var ingredientsList = [];
   for (var i = 1; i <= 15; i++) {
@@ -34639,6 +34638,8 @@ var CocktailRecipe = exports.CocktailRecipe = function CocktailRecipe(props) {
     )
   );
 };
+
+module.exports = CocktailRecipe;
 
 /***/ }),
 /* 560 */
@@ -34742,18 +34743,13 @@ exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.ScrollToTopButton = undefined;
-
 var _react = __webpack_require__(42);
 
 var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var ScrollToTopButton = exports.ScrollToTopButton = function ScrollToTopButton() {
+var ScrollToTopButton = function ScrollToTopButton() {
 
   var handleOnClickScrollUp = function handleOnClickScrollUp(event, scrollDuration) {
     event.preventDefault();
@@ -34773,6 +34769,8 @@ var ScrollToTopButton = exports.ScrollToTopButton = function ScrollToTopButton()
     '^'
   );
 };
+
+module.exports = ScrollToTopButton;
 
 /***/ }),
 /* 562 */
