@@ -1,23 +1,13 @@
 import React from 'react';
-import {
-  CocktailRecipesList
-} from '../../app/containers/CocktailRecipesList.jsx';
-import {
-  shallow,
-  render
-} from 'enzyme';
+import { CocktailRecipesList } from '../../app/containers/CocktailRecipesList.jsx';
+import { shallow, render } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
 describe('CocktailRecipesList', () => {
 
   it('should not render if loading is true', () => {
 
-    const wrapper = shallow( <
-      CocktailRecipesList loading = {
-        true
-      }
-      />
-    );
+    const wrapper = shallow(<CocktailRecipesList loading = { true }/>);
 
     expect(toJson(wrapper)).toMatchSnapshot();
 
@@ -27,12 +17,7 @@ describe('CocktailRecipesList', () => {
 
     const testCocktailList = undefined;
 
-    const wrapper = shallow( <
-      CocktailRecipesList cocktailList = {
-        undefined
-      }
-      />
-    );
+    const wrapper = shallow(<CocktailRecipesList cocktailList = { undefined }/>);
 
     expect(toJson(wrapper)).toMatchSnapshot();
 
@@ -40,20 +25,9 @@ describe('CocktailRecipesList', () => {
 
   it('should render recipes list if fetched cocktail list is not empty', () => {
 
-    const testCocktailList = [{
-      idDrink: 'cocktail - 1'
-    }, {
-      idDrink: 'cocktail - 2'
-    }, {
-      idDrink: 'cocktail - 3'
-    }];
+    const testCocktailList = [{idDrink: 'cocktail - 1'}, {idDrink: 'cocktail - 2'}, {idDrink: 'cocktail - 3'}];
 
-    const wrapper = shallow( <
-      CocktailRecipesList cocktailList = {
-        testCocktailList
-      }
-      />
-    );
+    const wrapper = shallow(<CocktailRecipesList cocktailList = { testCocktailList }/>);
 
     expect(toJson(wrapper)).toMatchSnapshot();
 

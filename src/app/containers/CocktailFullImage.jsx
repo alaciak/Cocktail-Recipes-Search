@@ -1,21 +1,21 @@
 import React from 'react';
-import { hideImage } from '../actions/fullImageAction';
+import { hideImage } from '../actions/fullImageActions';
 import { connect } from "react-redux";
 
 export class CocktailFullImage extends React.Component {
 
-  handleOnClickClose = e => {
-    e.preventDefault();
+  handleOnClickClose = event => {
+    event.preventDefault();
       this.props.hideImage();
   }
 
   render() {
-    if(this.props.url === null) {
+    if(!this.props.url) {
       return null
     } else {
       return (
         <div className='fullScreen' onClick={ this.handleOnClickClose }>
-          <div ><img src={ this.props.url } alt='cocktail image big' onClick={ e => e.stopPropagation()}></img></div>
+          <div ><img src={ this.props.url } alt='cocktail image big' onClick={ event => event.stopPropagation()}></img></div>
           <button type='button' className='fullScreen-button_close' onClick={ this.handleOnClickClose }>CLOSE</button>
         </div>
       );

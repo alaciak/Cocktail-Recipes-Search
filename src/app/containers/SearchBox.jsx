@@ -1,5 +1,5 @@
 import React from 'react';
-import { changeQuery } from '../actions/recipesListAction';
+import { changeQuery } from '../actions/recipesListActions';
 import { connect } from "react-redux";
 
 class SearchBox extends React.Component {
@@ -32,7 +32,7 @@ class SearchBox extends React.Component {
 
   handleOnKeyPress = event => {
     if(event.key === 'Enter') {
-      this.handleOnClick(event.target.value);
+      this.handleOnClick(event);
       }
     }
 

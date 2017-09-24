@@ -1,4 +1,4 @@
-import { showImage, hideImage } from '../../app/actions/fullImageAction';
+import { showImage, hideImage } from '../../app/actions/fullImageActions';
 
 describe('fullImageAction', () => {
 

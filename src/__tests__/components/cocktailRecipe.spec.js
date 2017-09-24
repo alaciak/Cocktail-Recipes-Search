@@ -1,6 +1,6 @@
 import React from 'react';
 import CocktailRecipe from '../../app/components/CocktailRecipe.jsx';
-import { shallow, mount, render } from 'enzyme';
+import { shallow, render } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
 describe('CocktailRecipe', () => {

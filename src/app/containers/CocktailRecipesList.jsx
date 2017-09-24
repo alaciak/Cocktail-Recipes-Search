@@ -1,7 +1,7 @@
 import React from 'react';
-import CocktailRecipe from '../components/CocktailRecipe.jsx';
+import { CocktailRecipe } from '../components/CocktailRecipe.jsx';
 import { connect } from "react-redux";
-import { showImage } from "../actions/fullImageAction";
+import { showImage } from "../actions/fullImageActions";
 
 export class CocktailRecipesList extends React.Component {
 
@@ -19,7 +19,7 @@ export class CocktailRecipesList extends React.Component {
           </section>
         );
       } else {
-      let recipes = this.props.cocktailList.map((recipe) => {
+        const recipes = this.props.cocktailList.map((recipe) => {
         return <CocktailRecipe key={ recipe.idDrink } id={ recipe.idDrink } recipe={ recipe } showFullImage={ this.props.showImage }/>
       });
       return (
@@ -28,8 +28,8 @@ export class CocktailRecipesList extends React.Component {
             <h1 className='col-12 recipes-list_heading'>Your Cocktails</h1>
             { recipes }
           </div>
-      </section>
-    );
+        </section>
+      );
     }
   }
 }
@@ -42,11 +42,11 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-    return {
-          showImage: (url) => {
-            dispatch(showImage(url));
-        }
-    };
+  return {
+      showImage: (url) => {
+        dispatch(showImage(url));
+    }
+  };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(CocktailRecipesList);
