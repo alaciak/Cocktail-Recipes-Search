@@ -15,7 +15,7 @@ class CocktailFullImage extends React.Component {
     } else {
       return (
         <div className='fullScreen' onClick={ this.handleOnClickClose }>
-          <div ><img src={ this.props.url } onClick={ e => e.stopPropagation()}></img></div>
+          <div ><img src={ this.props.url } alt='cocktail image big' onClick={ e => e.stopPropagation()}></img></div>
           <button type='button' className='fullScreen-button_close' onClick={ this.handleOnClickClose }>CLOSE</button>
         </div>
       );
