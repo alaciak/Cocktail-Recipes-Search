@@ -2,7 +2,7 @@ import React from 'react';
 import { hideImage } from '../actions/fullImageAction';
 import { connect } from "react-redux";
 
-class CocktailFullImage extends React.Component {
+export class CocktailFullImage extends React.Component {
 
   handleOnClickClose = e => {
     e.preventDefault();

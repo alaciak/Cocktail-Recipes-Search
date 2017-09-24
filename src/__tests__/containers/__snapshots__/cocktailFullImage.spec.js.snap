@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CocktailFullImage should not render if url is null 1`] = `null`;
+
+exports[`CocktailFullImage should render if url is passed 1`] = `
+<div
+  className="fullScreen"
+  onClick={[Function]}
+>
+  <div>
+    <img
+      alt="cocktail image big"
+      onClick={[Function]}
+      src="http://cocktail-recipes-search.com/my-image.jpg"
+    />
+  </div>
+  <button
+    className="fullScreen-button_close"
+    onClick={[Function]}
+    type="button"
+  >
+    CLOSE
+  </button>
+</div>
+`;

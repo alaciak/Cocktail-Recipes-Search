@@ -1,11 +1,11 @@
 import { changeQuery } from '../../app/actions/recipesListAction';
 import nock from 'nock';
 import configureMockStore from 'redux-mock-store';
-import promiseMiddleware from 'redux-promise-middleware';
+import promise from 'redux-promise-middleware';
 
 describe('recipesListAction', () => {
 
-  const middlewares = [promiseMiddleware()];
+  const middlewares = [promise()];
   const mockStore = configureMockStore(middlewares);
 
   it('should dispatch CHANGE_QUERY_PENDING and CHANGE_QUERY_FULFILLED when fetching data', () => {

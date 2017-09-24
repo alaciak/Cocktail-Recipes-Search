@@ -23,10 +23,14 @@ exports[`CocktailRecipe should render if recipe object is passed 1`] = `
       className="recipes-list_image"
     >
       <img
+        alt="cocktail image small"
         onClick={[Function]}
         src="testDrinkThumb"
       />
     </div>
+    <p>
+      [click image to enlarge]
+    </p>
   </div>
   <div
     className="col-6 recipes-list_ingredients"

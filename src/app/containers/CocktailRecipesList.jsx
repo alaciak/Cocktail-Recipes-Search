@@ -3,7 +3,7 @@ import CocktailRecipe from '../components/CocktailRecipe.jsx';
 import { connect } from "react-redux";
 import { showImage } from "../actions/fullImageAction";
 
-class CocktailRecipesList extends React.Component {
+export class CocktailRecipesList extends React.Component {
 
   render() {
     if (this.props.loading) {

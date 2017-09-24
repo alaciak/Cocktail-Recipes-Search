@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CocktailRecipesList should not render if loading is true 1`] = `null`;
+
+exports[`CocktailRecipesList should render recipes list if fetched cocktail list is not empty 1`] = `
+<section
+  id="recipes-list"
+>
+  <div
+    className="container recipes-list"
+  >
+    <h1
+      className="col-12 recipes-list_heading"
+    >
+      Your Cocktails
+    </h1>
+    <CocktailRecipe
+      id="cocktail - 1"
+      key="cocktail - 1"
+      recipe={
+        Object {
+          "idDrink": "cocktail - 1",
+        }
+      }
+    />
+    <CocktailRecipe
+      id="cocktail - 2"
+      key="cocktail - 2"
+      recipe={
+        Object {
+          "idDrink": "cocktail - 2",
+        }
+      }
+    />
+    <CocktailRecipe
+      id="cocktail - 3"
+      key="cocktail - 3"
+      recipe={
+        Object {
+          "idDrink": "cocktail - 3",
+        }
+      }
+    />
+  </div>
+</section>
+`;
+
+exports[`CocktailRecipesList should render recipes list not found if fetched cocktail list is undefinded 1`] = `
+<section
+  id="recipes-list"
+>
+  <div
+    className="container recipes-list_not-found"
+  >
+    <p>
+      Ooops it looks like we don't have this cocktail recipe for you...
+    </p>
+    <p>
+      Why not try another search?
+    </p>
+  </div>
+</section>
+`;
