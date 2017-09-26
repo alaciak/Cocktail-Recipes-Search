@@ -200,13 +200,14 @@ input[type=text] {
   .fullScreen img {
     border-radius: 0.5em;
     display: block;
-    margin: 1.5em auto;
-    width: 300px;
-    height: 300px; }
-    @media (min-width: 640px) {
+    margin: 1em auto;
+    width: 295px;
+    height: 295px; }
+    @media (min-width: 640px) and (orientation: landscape) {
       .fullScreen img {
-        width: 400px;
-        height: 400px; } }
+        margin: 0.5em auto;
+        width: 300px;
+        height: 300px; } }
     @media (min-width: 840px) {
       .fullScreen img {
         margin: 1em auto;
