@@ -78,7 +78,7 @@ body {
   padding: .5em;
   width: 100%; }
 
-input[type=text] {
+input[type=search] {
   width: 75%;
   padding: .6em;
   border: 0;
@@ -86,13 +86,13 @@ input[type=text] {
   font-size: 1em;
   color: #575b4f; }
   @media (min-width: 445px) {
-    input[type=text] {
+    input[type=search] {
       font-size: 1.25em; } }
   @media (min-width: 640px) {
-    input[type=text] {
+    input[type=search] {
       width: 85%; } }
   @media (min-width: 845px) {
-    input[type=text] {
+    input[type=search] {
       font-size: 1.5em; } }
 
 .search-box_button {

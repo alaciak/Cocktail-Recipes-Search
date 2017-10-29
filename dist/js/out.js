@@ -34358,7 +34358,7 @@ var SearchBox = function (_React$Component) {
         _react2.default.createElement(
           'div',
           { className: 'row' },
-          _react2.default.createElement('input', { className: 'search-box_input', type: 'text', value: this.state.text, onChange: this.handleOnChangeSearch, onClick: this.handleOnClickSearch, onKeyPress: this.handleOnKeyPress }),
+          _react2.default.createElement('input', { className: 'search-box_input', type: 'search', value: this.state.text, onChange: this.handleOnChangeSearch, onClick: this.handleOnClickSearch, onKeyPress: this.handleOnKeyPress }),
           _react2.default.createElement(
             'div',
             { className: 'search-box_button', onClick: this.handleOnClick },
