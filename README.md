@@ -20,7 +20,7 @@ node_modules\.bin\webpack-dev-server --hot
 ```
 in order to build the project on Linux:
 ``` bash
-./node_modules/.bin/webpack-dev-server -h
+./node_modules/.bin/webpack-dev-server --hot
 ```
 
 after successfully running the webpack server, the app should be available at: http://localhost:3001/
