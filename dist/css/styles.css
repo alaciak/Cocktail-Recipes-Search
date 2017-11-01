@@ -94,6 +94,9 @@ input[type=search] {
   @media (min-width: 845px) {
     input[type=search] {
       font-size: 1.5em; } }
+  input[type=search]:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px #a8ed63; }
 
 .search-box_button {
   display: inline-block;

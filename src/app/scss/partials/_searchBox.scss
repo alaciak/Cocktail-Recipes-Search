@@ -22,6 +22,10 @@ input[type=search] {
   @media (min-width: 845px) {
     font-size: 1.5em;
   }
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px map-get($font-colors, recipe-heading);
+  }
 }
 
 .search-box_button {

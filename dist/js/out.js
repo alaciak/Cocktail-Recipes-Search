@@ -34397,6 +34397,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.changeQuery = changeQuery;
+exports.getCocktailList = getCocktailList;
 
 var _isomorphicFetch = __webpack_require__(557);
 
@@ -34407,6 +34408,26 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function changeQuery(query) {
 
   var url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + query;
+
+  var fetchPromise = (0, _isomorphicFetch2.default)(url).then(function (resp) {
+    var contentType = resp.headers.get("content-type");
+    if (contentType && contentType.includes("application/json")) {
+      return resp.json();
+    }
+    throw new TypeError("Oops, we haven't got JSON!");
+  }).then(function (data) {
+    return data.drinks;
+  });
+
+  return {
+    type: 'CHANGE_QUERY',
+    payload: fetchPromise
+  };
+}
+
+function getCocktailList(query) {
+
+  var url = 'http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list';
 
   var fetchPromise = (0, _isomorphicFetch2.default)(url).then(function (resp) {
     var contentType = resp.headers.get("content-type");

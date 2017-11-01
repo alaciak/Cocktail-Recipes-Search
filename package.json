@@ -41,7 +41,8 @@
     "webpack-dev-server": "^2.7.1"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "watch": "webpack-dev-server"
   },
   "author": "",
   "license": "ISC"
